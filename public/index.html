@@ -1,43 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Minimal Login Design AsmProg</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<div class="logo3">
+  <img src="logo3.png" alt="Logo">
+  <a href="#">AsmProg</a>
+</div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<div class="container">
+  <h1>Login to your account</h1>
+  
+  <div class="social-login">
+    <button class="google">
+      <i class='bx bxl-google'></i>
+      Use Google
+    </button>
+    <button class="apple">
+      <i class='bx bxl-apple'></i>
+      Use Apple
+    </button>
+  </div>
+  
+  <div class="divider">
+    <div class="line"></div>
+    <p>Or</p>
+    <div class="line"></div>
+  </div>
+  
+  <form>
+    <label for="email">Email</label>
+    <div class="custome-input">
+      <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="off">
+      <i class='bx bx-at'></i>
+    </div>
+    
+    <label for="password">Password:</label>
+    <div class="custome-input">
+      <input type="password" id="password" name="password" placeholder="Your Password">
+      <i class='bx bx-lock-alt'></i>
+    </div>
+    
+    <button type="submit" class="login">Login</button>
+    
+    <div class="links">
+      <a href="#">Reset Password</a>
+      <a href="#">Don't have an account?</a>
+    </div>
+  </form>
+</div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<script>
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const loginButton = document.querySelector(".login");
+
+  let users = {};
+
+  function User(email, password) {
+    this.email = email;
+    this.password = password;
+  }
+
+  function createUserId(users) {
+    return Object.keys(users).length + 1;
+  }
+  function handleLogin(event) {
+    event.preventDefault();
+    
+    const emailUser = email.value;
+    const passwordUser = password.value;
+
+    const user = new User(emailUser, passwordUser);
+    const userId = 'User' + createUserId(users);
+
+    users[userId] = user;
+
+    console.log(users);
+    alert(`${emailUser}, you have successfully registered`);
+
+    // Redirect the user to a new page after successful registration
+    window.location.href = "new_page.html";
+}
+
+  function handleLogin(event) {
+    event.preventDefault();
+    
+    const emailUser = email.value;
+    const passwordUser = password.value;
+
+    const user = new User(emailUser, passwordUser);
+    const userId = 'User' + createUserId(users);
+
+    users[userId] = user;
+
+    console.log(users);
+    alert(`${emailUser}, you have successfully registered`);
+  }
+  
+
+  loginButton.addEventListener('click', handleLogin);
+</script>
+
+</body>
+</html>
+
+
+    </div>
+ 
+
+
+</body>
 </html>

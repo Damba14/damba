@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@300,400;500;600;700;800&display=swap');
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Mulish', sans=serify;
+
  }
  body{
    height: 100vh;
@@ -33,24 +33,24 @@
    color: #464646;
  }
 
- .container{
+ .countainer{
    width: 440px;
    padding: 40px 32px ;
    border-radius: 8px;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
  
- .container h1{
+ .countainer h1{
    font-size: 1.6rem;
  }
 
- .container .social-login{
+ .countainer .social-login{
    display: flex;
    gap: 16px;
    margin-top: 20px;
  }
 
- .container .social-login button{
+ .countainer .social-login button{
    padding: 8px;
    width: 100%;
    border-radius: 8px;
@@ -66,23 +66,25 @@
    transition:  all 0.3s ease;
  }
 
- .container .social-login button{
+ .countainer .social-login button{
    font-size: 26px;
 
  }
 
- .container .social-login button:hover{
+ .countainer .social-login button:hover{
    color: #6b43ff;
    border-color: #6b43ff;
+
  }
 
- .container .divider{
+ .countainer .divider{
    display: flex;
    align-items:  center;
    gap: 20px;
+
  }
 
- .container .divider .line{
+ .countainer .divider .line{
    height: 1px;
    width: 100%;
    background: #1d1d1d;
@@ -90,21 +92,23 @@
    margin: 30px 0 16px;
  }
 
- .container form label{
+ .countainer form label{
    color: #1d1d1d;
    font-size: 14px;
    font-weight: bold;
    letter-spacing: 0.03rem;
    display: block;
    margin: 12px;
+
+
  }
 
- .container form .custome-input{
+ .countainer form .custome-input{
    position: relative;
 
  }
 
- .container form .custome-input input{
+ .countainerform .custome-input input{
    color: #1d1d1d;
    font-size: 16px;
    font-weight: 500;
@@ -117,13 +121,15 @@
    text-indent: 20px;
    margin-top: 6px;
    transition: all 0.3s ease;
+
+
  }
 
- .container form .custome-input input:focus{
+ .countainer form .custome-input input:focus{
    border-color: #5222fd;
  }
 
-.container form .custome-input i{
+.countainer form .custome-input i{
    position: absolute;
    font-size: 26px;
    right: 10px;
@@ -131,11 +137,13 @@
    transition: all 0.3s ease;
 }
 
- .container form .custome-input input:focus + i{
+ .countainer form .custome-input input:focus + i{
    color: #5222fd;
+
+
  }
 
- .container form .login{
+ .countainer form .login{
    width: 100%;
    margin-top: 30px;
    background: #6b43ff;
@@ -149,27 +157,31 @@
    border-radius: 8px;
    box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.15);
    transition: all 0.3s ease;
+
  }
 
- .container form .login:hover{
+ .countainer form .login:hover{
    background: #5222fd;
+
  }
 
- .container .links{
+ .countainer .links{
    display: flex;
    justify-content: space-between;
    margin-top: 30px;
+
  }
 
- .container .links a{
+ .countainer .links a{
    color: #6b43ff;
    font-weight: 600;
    font-size: 1rem;
    text-decoration: none;
    text-underline-offset: 6px;
    text-decoration-color: #6b43ff;
+
  }
 
- .container .links a:hover{
+ .countainer .links a:hover{
    text-decoration: underline;
  }
